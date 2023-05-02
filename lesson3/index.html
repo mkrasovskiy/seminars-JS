@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function userInfo(name, surname, age) {
+        //     console.log(`Привет, ${name} ${surname}, ваш возраст ${age}`);
+        // }
+        
+        // function lvlUp(money) {
+        //     return money ** 2;
+        // }
+
+        // function plusMinus(number) {
+        //     if (number >= 0) {
+        //         console.log('Положительное число');
+        //     } else {
+        //         console.log('Отрицательное число');
+        //     }
+        // }
+
+        // function sum(num1, num2, num3) {
+        //     let result = Number(num1) + Number(num2) + Number(num3);
+        //     console.log(`Сумма чисел ${num1}, ${num2}, ${num3} равна ${result}`)
+        // }
+        
+        // let param1 = '1';
+        // let param2 = 2;
+        // let param3 = 3;
+        // sum(param1, param2, param3);
+
+        // function sum(a, b) {
+        //     console.log(Math.sqrt(a) + Math.sqrt(b));
+        // }
+        // sum(9, 16);
+
+        // function minNum(num1, num2) {
+        //     if (num1 > num2) {
+        //         console.log(`Минимальное число ${num2}`);
+        //     } else {
+        //         console.log(`Минимальное число ${num1}`);
+        //     }
+        // }
+
+        // function calculateDegree(number, pow) {
+        //     console.log(number ** pow);
+        // }
+        // let firstNumber = prompt('Введите число которое хотите возвести в степень:');
+        // let secondNumber = prompt('Введите степень в которую хотите возвести в степень:');
+
+        // calculateDegree(firstNumber, secondNumber);
+            
+        // function abs(num) {
+        //     if (num >= 0) {
+        //         console.log(num); 
+        //     } else {
+        //         console.log(-num);
+        //     }
+        // }
+        // abs(-10);
+
+        // function dayOfTheWeek(day) {
+        //     switch (day) {
+        //     case 1:
+        //         console.log('Понедельник');
+        //         break;
+        //     case 2:
+        //         console.log('Вторник');
+        //         break;
+        //     case 3:
+        //         console.log('Среда');
+        //         break;
+        //     case 4:
+        //         console.log('Четверг');
+        //         break;
+        //     case 5:
+        //         console.log('Пятница');
+        //         break;
+        //     case 6:
+        //         console.log('Суббота');
+        //         break;
+        //     case 7:
+        //         console.log('Воскресенье');
+        //         break;
+        //     default:
+        //         console.log('День недели не существует!');
+        //         break;
+        //     }   
+        // }
+        // dayOfTheWeek(1);
+        
+        // function timesOfDay(name, time) {
+        //     if (time >= 6 && time < 12) {
+        //         console.log(`Доброе утро ${name}`);
+        //     } else if (time >= 12 && time < 17) {
+        //         console.log(`Добрый день ${name}`);
+        //     } else if (time >= 17 && time < 23) {
+        //         console.log(`Добрый вечер ${name}`);
+        //     } else {
+        //         console.log(`Доброй ночи ${name}`);
+        //     }
+
+        // }
+        // timesOfDay('Maks', 3);
+
+        function timesOfDay(name, time) {
+            switch (true) {
+            case (time >= 6) && (time < 12):
+                console.log(`Доброе утро ${name}`);
+            break;
+            case (time >= 12) && (time < 17):
+                console.log(`Добрый день ${name}`);
+            break;
+            case (time >= 17) && (time <= 24):
+                console.log(`Доброго вечера ${name}`);
+            break;
+            case (time >= 0) && (time < 6):
+            console.log(`Доброй ночи ${name}`);
+            break;
+
+            }
+        }
+
+        timesOfDay('Maks', 13);
+    </script>
+</body>
+</html>
