@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <!-- <form class="form">
+        	<input type="radio" id="tea" class="input-tea" name="drink" value="Чай" />
+        	<label for="tea">Чай</label>
+        	<input type="radio" id="coffee" class="input-coffee" name="drink" value="Кофе">
+        	<label for="coffee">Кофе</label>
+    	</form>
+    	<div class="error"></div>
+    	<button class="btn">Отправить</button> -->
+
+        <!-- <form class="form">
+        <label for="pas">Введите пароль</label>
+        <input class="password" id="pas" type="password">;<br>
+        <button class="but">Отправить</button>
+        </form> -->
+
+        <label for="txt">Введите текст</label>
+        <input class="text" id="txt" type="text">;<br>
+        <h1 class="title">Заголовок</h1>
+    <script>
+        // const formEl = document.querySelector('.form');
+        // const butEl = document.querySelector('.btn');
+        // const errorEl = document.querySelector('.error');
+        // butEl.addEventListener('click', (e) => {
+        //     const form = formEl.elements['drink'].value;
+        //     errorEl.textContent = `${form} закончился`;
+        // });
+
+        // const formEl = document.querySelector('.form');
+        // const inputEl = document.querySelector('.password');
+        // const buttonEl = document.querySelector('.but');
+        // formEl.addEventListener('submit', function (e) {
+        //     e.preventDefault();
+        //     if (inputEl.value === 'пароль') {
+        //         inputEl.style.borderColor = 'green';
+        //     } else {
+        //         inputEl.style.borderColor = 'red';
+        //         alert('Пароль неверный');
+        //     }
+        // });
+        
+        const inputEl = document.querySelector('.text');
+        const hEl = document.querySelector('.title');
+        inputEl.addEventListener('input', function (e) {
+            hEl.innerHTML = inputEl.value;
+        });
+
+        btnEl.addEventListener('click', function (e) {
+        const liEl = document.createElement('li');
+        liEl.textContent = inputEl.value;
+        ulEl.append(liEl);
+        })
+
+    </script>
+</body>
+</html>
