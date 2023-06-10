@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content"></div>
+    <script src="data.js"></script>
+    <script>
+        
+            const data = JSON.parse(dataInfo);
+            console.log(data);
+            
+        data.forEach(e => {
+            
+            const divEl = document.querySelector('.content');
+            const activityEl = document.createElement('p');
+            activityEl.textContent = e.activity;
+
+            const typeEl = document.createElement('p');
+            typeEl.textContent = e.type;
+
+            const keyEl = document.createElement('p');
+            keyEl.textContent = e.key;
+
+            divEl.appendChild(activityEl);
+            divEl.appendChild(typeEl);
+            divEl.appendChild(keyEl);
+        });
+        
+    </script>
+</body>
+</html>
