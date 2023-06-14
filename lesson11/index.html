@@ -18,7 +18,7 @@
                     <li class="catalog-list-price">Price: <span class="red">$300</span></li>
                     <li class="catalog-list-color">Color: <span>Red</span></li>
                     <li class="catalog-list-size">Size: <span>Xl</span></li>
-                    <li class="catalog-list-Quantity">Quantity: <button class="catalog-list-btn">2</button></li>
+                    <li class="catalog-list-Quantity">Quantity: <label><input class="catalog-list-input" type="number" value=""></label></li>
                 </ul>
             </div>
             <div class="catalog-items-cross">
@@ -84,9 +84,12 @@
         liQuantityEl.classList.add('catalog-list-Quantity');
         liQuantityEl.textContent = 'Quantity:';
 
-        const buttonEl = document.createElement('button');
-        buttonEl.classList.add('catalog-list-btn');
-        buttonEl.textContent = element.Quantity;
+        const labelEl = document.createElement('label');
+
+        const inputEl = document.createElement('input');
+        inputEl.classList.add('catalog-list-input');
+        inputEl.setAttribute('type', 'number');
+        inputEl.setAttribute('value', element.Quantity);
 
         const catalogItemsCrossEl = document.createElement('div');
         catalogItemsCrossEl.classList.add('catalog-items-cross');
@@ -112,7 +115,8 @@
         ulEl.append(liSizeEl);
         liSizeEl.append(liSizeSpanEl);
         ulEl.append(liQuantityEl);
-        liQuantityEl.append(buttonEl);
+        liQuantityEl.append(labelEl);
+        labelEl.append(inputEl);
         articleEl.append(catalogItemsCrossEl);
         catalogItemsCrossEl.append(aCrossEl);
         aCrossEl.append(aCrossImgEl);
