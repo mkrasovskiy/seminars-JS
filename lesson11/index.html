@@ -7,27 +7,116 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 </head>
-<body>
-    <section class="catalog">
-        <article class="catalog-items">
+<body >
+        <!-- <article class="catalog-items">
             <a href="#">
-                <img class="catalog-items-img" src="img/foto1.jpg" alt="foto1" width="262" height="306">
+                <img class="catalog-items-img" src="img/foto1.jpg" alt="foto1">
             </a>
             <div class="catalog-items-content">
                 <h2 class="catalog-items-content-title">mango people t-shirt</h2>
                 <ul class="catalog-list">
-                    <li class="catalog-list-price">Price: <span>$300</span></li>
+                    <li class="catalog-list-price">Price: <span class="red">$300</span></li>
                     <li class="catalog-list-color">Color: <span>Red</span></li>
-                    <li class="catalog-list-size">Size: Xl</li>
+                    <li class="catalog-list-size">Size: <span>Xl</span></li>
                     <li class="catalog-list-Quantity">Quantity: <button class="catalog-list-btn">2</button></li>
                 </ul>
             </div>
-            <div>
-                <a href="#">
-                    <img class="cross" src="img/Vector.svg" alt="vector">
+            <div class="catalog-items-cross">
+                <a class="cross" href="#">
+                    <img src="img/Vector.svg" alt="cross">
                 </a>
             </div>
-        </article>
-    </section>
+        </article> -->
+        
+    <script src="data.js"></script>
+    <script>
+        const сardProducts = JSON.parse(dataProducts);
+        console.log(сardProducts);
+
+        const bodyEl = document.querySelector('body');
+        bodyEl.classList.add('catalog');
+
+        сardProducts.forEach(element => {
+        const articleEl = document.createElement('article');
+        articleEl.classList.add('catalog-items');
+
+        const articleAEl = document.createElement('a');
+        articleAEl.href= '#';
+
+        const articleImgEl = document.createElement('img');
+        articleImgEl.classList.add('catalog-items-img');
+        articleImgEl.src = element.image;
+        articleImgEl.alt = 'foto';
+
+        const catalogItemsContentEl = document.createElement('div');
+        catalogItemsContentEl.classList.add('catalog-items-content');
+
+        const h2El = document.createElement('h2');
+        h2El.classList.add('catalog-items-content-title');
+        h2El.textContent = element.title;
+
+        const ulEl = document.createElement('ul');
+        ulEl.classList.add('catalog-list');
+
+        const liPriceEl = document.createElement('li');
+        liPriceEl.classList.add('catalog-list-price');
+        liPriceEl.textContent = 'Price:';
+        
+        const liPriceSpanEl = document.createElement('span');
+        liPriceSpanEl.classList.add('red');
+        liPriceSpanEl.textContent = `$${element.price}`;
+
+        const liColorEl = document.createElement('li');
+        liColorEl.classList.add('catalog-list-price');
+        liColorEl.textContent = 'Color:';
+
+        const liColorSpanEl = document.createElement('span');
+        liColorSpanEl.textContent = ` ${element.color}`;
+
+        const liSizeEl = document.createElement('li');
+        liSizeEl.classList.add('catalog-list-size');
+        liSizeEl.textContent = 'Size:';
+
+        const liSizeSpanEl = document.createElement('span');
+        liSizeSpanEl.textContent = ` ${element.size}`;
+
+        const liQuantityEl = document.createElement('li');
+        liQuantityEl.classList.add('catalog-list-Quantity');
+        liQuantityEl.textContent = 'Quantity:';
+
+        const buttonEl = document.createElement('button');
+        buttonEl.classList.add('catalog-list-btn');
+        buttonEl.textContent = element.Quantity;
+
+        const catalogItemsCrossEl = document.createElement('div');
+        catalogItemsCrossEl.classList.add('catalog-items-cross');
+
+        const aCrossEl = document.createElement('a');
+        aCrossEl.classList.add('cross');
+        aCrossEl.href = '#';
+        
+        const aCrossImgEl = document.createElement('img');
+        aCrossImgEl.src = 'img/Vector.svg';
+        aCrossImgEl.alt = 'cross';
+
+        bodyEl.append(articleEl);
+        articleEl.append(articleAEl);  
+        articleAEl.append(articleImgEl);
+        articleEl.append(catalogItemsContentEl);
+        catalogItemsContentEl.append(h2El);
+        catalogItemsContentEl.append(ulEl);
+        ulEl.append(liPriceEl);
+        liPriceEl.append(liPriceSpanEl);
+        ulEl.append(liColorEl);
+        liColorEl.append(liColorSpanEl);
+        ulEl.append(liSizeEl);
+        liSizeEl.append(liSizeSpanEl);
+        ulEl.append(liQuantityEl);
+        liQuantityEl.append(buttonEl);
+        articleEl.append(catalogItemsCrossEl);
+        catalogItemsCrossEl.append(aCrossEl);
+        aCrossEl.append(aCrossImgEl);
+        });        
+    </script>
 </body>
 </html>
