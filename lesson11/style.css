@@ -40,12 +40,6 @@ body {
     gap: 6px;
     font-size: 22px;
     line-height: 26px;
-}
-
-.catalog-list-price,
-.catalog-list-color,
-.catalog-list-size,
-.catalog-list-Quantity {
     color: #575757;
 }
 .red {
@@ -66,4 +60,3 @@ body {
     display: block;
     margin: 28px 22px auto auto;
 }
-
